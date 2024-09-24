@@ -1,0 +1,40 @@
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: unset;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Alexandria", sans-serif;
+  background-image: url("../imgs/bg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  // @include dir(rtl) {
+  // }
+  // @include dir(ltr) {
+  // }
+}
+input {
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,152 @@
+.login-page {
+  height: 100vh;
+  background-color: #084c51;
+  background-image: url("../imgs/bg.webp");
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  @media (max-height: 601px) {
+    height: unset;
+    overflow: auto;
+  }
+  @include after {
+    height: 122vh;
+    width: 64%;
+    background-color: #fff;
+    right: -167px;
+    top: 0;
+    transform: rotate(-15deg);
+    border-radius: 150px;
+    z-index: -1;
+    @include dir(rtl) {
+      transform: rotate(-15deg);
+      right: -167px;
+    }
+    @include dir(ltr) {
+      transform: rotate(15deg);
+      left: -167px;
+    }
+    @include media(992) {
+      height: 82%;
+      width: 100%;
+      background-color: #fff;
+      top: 50%;
+      border-radius: 150px;
+      @include dir(rtl) {
+        right: 0;
+        transform: translateY(-49%);
+      }
+      @include dir(ltr) {
+        left: 0;
+        transform: translateY(-49%);
+      }
+    }
+    @include media(772) {
+      border-radius: 40px;
+      height: 90%;
+    }
+  }
+  .login-box {
+    width: 56%;
+    @include media(1200) {
+      width: 75%;
+    }
+    @include media(992) {
+      width: 100%;
+    }
+    @media (max-height: 601px) {
+      padding: 60px 24px;
+    }
+    .login-box-text {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 29px;
+      margin: 40px 0;
+      color: #515151;
+      @include media(772) {
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+    .login-logo-box {
+      margin-bottom: 40px;
+      img {
+        height: 62px;
+      }
+    }
+    .login-form-box {
+      .login-input-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 55px;
+        padding: 4px;
+        border: 1px solid #f7f7f7;
+
+        input {
+          border: 0;
+          width: 83%;
+          &:focus {
+            outline: 0;
+            box-shadow: none;
+          }
+        }
+        .login-input-box-icon {
+          width: 30px;
+          height: 30px;
+          background-color: #f5f5f5;
+          border-radius: 50%;
+          display: grid;
+          place-content: center;
+          svg {
+            color: #cacaca;
+          }
+        }
+      }
+    }
+    .login-button {
+      padding: 12px;
+      border: 0;
+      width: 80%;
+      margin: 20px auto;
+      color: #fff;
+      font-size: 20px;
+      position: relative;
+      svg {
+        height: 25px;
+        color: #578362;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 12px;
+
+        @include media(772) {
+          height: 20px;
+        }
+      }
+      @include media(772) {
+        font-size: 15px;
+        width: 100% !important;
+      }
+      &.login-md-button {
+        font-size: 13px;
+        padding: 12px 9px;
+        margin: 0 auto;
+        svg {
+          height: 15px;
+        }
+      }
+    }
+
+    .forget-button-box {
+      .forget-button-item {
+        font-size: 14px;
+        color: #1095b0;
+        font-weight: 500;
+        @include media(772) {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}

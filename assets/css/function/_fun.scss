@@ -1,0 +1,6 @@
+@mixin hover($trans: "0.2") {
+  transition: #{$trans}s all ease-in-out;
+  &:hover {
+    @content;
+  }
+}

@@ -1,0 +1,70 @@
+.input-data-box-title {
+  font-size: 13px;
+  color: #848484;
+  margin-bottom: 12px;
+}
+
+.input-box {
+  &.input-box-upload {
+    position: relative;
+    label {
+      border: 1px solid #eee;
+      border-radius: 30px;
+      display: grid;
+      place-content: center;
+      height: 150px;
+      width: 100%;
+      cursor: pointer;
+      text-align: center;
+      .input-box-upload-text {
+        color: #35afaa;
+        font-size: 15px;
+        margin-bottom: 12px;
+        font-weight: 500;
+      }
+      svg {
+        margin: 0 auto;
+        font-size: 50px;
+        color: #e9e9e9;
+      }
+    }
+    input {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+    }
+  }
+  .input-data-box {
+    position: relative;
+
+    .input-data-box-input-box {
+      border: 1px solid #eee;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      input {
+        width: 100%;
+      }
+      textarea {
+        height: 150px;
+        padding: 12px;
+        &:focus {
+          border: 0;
+          outline: 0;
+          box-shadow: none;
+        }
+      }
+      .input-data-box-input-box-icon {
+        display: grid;
+        place-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        color: #fff;
+        @extend.tb-button;
+        cursor: pointer;
+      }
+    }
+  }
+}

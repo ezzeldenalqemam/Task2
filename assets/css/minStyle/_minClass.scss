@@ -1,0 +1,39 @@
+.overlay {
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.26);
+  position: fixed;
+  z-index: 99;
+}
+
+%cursors-item {
+  cursor: url("../imgs/Cursors.svg") 4 12, auto;
+}
+
+%between-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+%scrollableStyle {
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #bfbfbf4e;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #9d9d9d;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #7a7a7a;
+  }
+}
+
+%box-style-content {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2352941176);
+}

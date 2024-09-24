@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#4ABB82" />
+    <link rel="icon" type="image/x-icon" href="./assets/imgs/favicon.png" />
+    <meta
+      name="description"
+      content="Start working with Queue that can provide everything you need to generate sales, drive traffic, connect with your loyal customers."
+    />
+    <link href="./assets/css/plugin/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/plugin/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css?v=1" />
+    <title>منصة تبادل</title>
+  </head>
+
+  <body class="body-class" id="body-selector">
+    <div id="page" class="hfeed site">
+      <!--       start header-->
+      <div class="header-container">
+        <header class="wrapper">
+          <div class="top-header">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div
+                    class="top-header-content d-flex align-items-center justify-content-end gap-4"
+                  >
+                    <h3 class="top-header-content-name">
+                      محمود ربيع محمد احمد
+                    </h3>
+                    <div class="top-header-content-notification">
+                      <div
+                        class="top-header-content-notification-icon top-header-content-icon"
+                        onclick="openNotation(event)"
+                      >
+                        <i class="fas fa-bell"></i>
+                        <span class="bell-dot"></span>
+                      </div>
+                      <div class="top-header-content-notification-box d-none">
+                        <ul class="list-unstyled">
+                          <li>
+                            هناك العديد من النصوص هنا
+                            <a href="#" class="stretched-link"></a>
+                          </li>
+                          <li>
+                            هناك العديد من النصوص هنا
+                            <a href="#" class="stretched-link"></a>
+                          </li>
+                          <li>
+                            هناك العديد من النصوص هنا
+                            <a href="#" class="stretched-link"></a>
+                          </li>
+                        </ul>
+                        <div
+                          class="top-header-content-notification-box-more-link"
+                        >
+                          <a href="#"> المزيد +99 </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="top-header-content-icon">
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="min-header">
+            <div class="container">
+              <div class="row justify-content-end align-items-center">
+                <div class="col-md-6">
+                  <div class="menu-icon">
+                    <span onclick="openMenu()">
+                      <i class="fa-solid fa-bars"></i>
+                    </span>
+                  </div>
+                  <div class="nav-links">
+                    <div class="close-item" onclick="removeMenu()">
+                      <i class="fa-solid fa-times"></i>
+                    </div>
+
+                    <ul class="list-unstyled">
+                      <li><a href="./index.html">الرئيسة</a></li>
+                      <li>
+                        <a href="#" class="active">ارسال معلومات مكانية</a>
+                      </li>
+                      <li><a href="#">استقبال معلومات مكانية</a></li>
+                      <li><a href="#">التقارير</a></li>
+                    </ul>
+                    <div class="min-header-button">
+                      <button
+                        onclick="removeMenu()"
+                        data-bs-toggle="modal"
+                        data-bs-target="#mediaModal"
+                      >
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        تبادل مرفقات
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-2 col-lg-3">
+                  <div class="min-header-button d-flex justify-content-end">
+                    <button data-bs-toggle="modal" data-bs-target="#mediaModal">
+                      <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                      تبادل مرفقات
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="logo-box">
+            <a href="./index.html"
+              ><img src="./assets/imgs/logo.webp" alt="logo" class="img-box"
+            /></a>
+          </div>
+        </header>
+        <div
+          class="modal media-modal fade"
+          id="mediaModal"
+          tabindex="-1"
+          aria-labelledby="mediaModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title" id="mediaModalLabel">تبادل مرفقات</h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="modal-tab-box">
+                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="active"
+                        id="pills-data-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-data"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-data"
+                        aria-selected="true"
+                      >
+                        بيانات المراسلة
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class=""
+                        id="pills-media-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-media"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-media"
+                        aria-selected="false"
+                      >
+                        مرفقات المراسلة
+                      </button>
+                    </li>
+                  </ul>
+
+                  <div class="tab-content" id="pills-tabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="pills-data"
+                      role="tabpanel"
+                      aria-labelledby="pills-data-tab"
+                      tabindex="0"
+                    >
+                      <form>
+                        <div class="input-box pt-4">
+                          <div class="input-data-box">
+                            <label
+                              for="clint-name"
+                              class="d-block input-data-box-title"
+                            >
+                              اسم العميل المستقبل للطلب
+                            </label>
+                            <div class="p-2 input-data-box-input-box">
+                              <input
+                                type="text"
+                                class="border-0"
+                                id="clint-name"
+                              />
+                              <span
+                                class="input-data-box-input-box-icon"
+                                onclick="openModalMenuData(event)"
+                                data-tippy-content="اضف اكثر من مستقبل"
+                              >
+                                <i class="fas fa-plus"></i>
+                              </span>
+                            </div>
+
+                            <div
+                              class="input-data-box-name-container d-none"
+                              onclick="openModalMenuData(event)"
+                            >
+                              <ul
+                                class="list-unstyled d-flex flex-wrap justify-content-between gap-3"
+                              >
+                                <li>
+                                  <div class="check-bottom">
+                                    <label class="checkbox-container">
+                                      <input type="checkbox" />
+                                      <span class="checkmark"></span>
+                                      اسم الموظف رقم واحد
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="check-bottom">
+                                    <label class="checkbox-container">
+                                      <input type="checkbox" />
+                                      <span class="checkmark"></span>
+                                      اسم الموظف رقم واحد
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="check-bottom">
+                                    <label class="checkbox-container">
+                                      <input type="checkbox" />
+                                      <span class="checkmark"></span>
+                                      اسم الموظف رقم واحد
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="check-bottom">
+                                    <label class="checkbox-container">
+                                      <input type="checkbox" />
+                                      <span class="checkmark"></span>
+                                      اسم الموظف رقم واحد
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="check-bottom">
+                                    <label class="checkbox-container">
+                                      <input type="checkbox" />
+                                      <span class="checkmark"></span>
+                                      اسم الموظف رقم واحد
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="check-bottom">
+                                    <label class="checkbox-container">
+                                      <input type="checkbox" />
+                                      <span class="checkmark"></span>
+                                      اسم الموظف رقم واحد
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="check-bottom">
+                                    <label class="checkbox-container">
+                                      <input type="checkbox" />
+                                      <span class="checkmark"></span>
+                                      اسم الموظف رقم واحد
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="check-bottom">
+                                    <label class="checkbox-container">
+                                      <input type="checkbox" />
+                                      <span class="checkmark"></span>
+                                      اسم الموظف رقم واحد
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="check-bottom">
+                                    <label class="checkbox-container">
+                                      <input type="checkbox" />
+                                      <span class="checkmark"></span>
+                                      اسم الموظف رقم واحد
+                                    </label>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="check-bottom">
+                                    <label class="checkbox-container">
+                                      <input type="checkbox" />
+                                      <span class="checkmark"></span>
+                                      اسم الموظف رقم واحد
+                                    </label>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="input-box pt-4">
+                          <div class="input-data-box">
+                            <label
+                              for="subject"
+                              class="d-block input-data-box-title"
+                              >الموضوع</label
+                            >
+                            <div class="p-2 input-data-box-input-box">
+                              <input
+                                type="text"
+                                id="subject"
+                                class="border-0"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="input-box pt-4">
+                          <div class="input-data-box">
+                            <label
+                              for="message"
+                              class="d-block input-data-box-title"
+                              >الشرح</label
+                            >
+                            <div class="p-2 input-data-box-input-box">
+                              <textarea
+                                class="border-0 w-100"
+                                id="message"
+                              ></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="pills-media"
+                      role="tabpanel"
+                      aria-labelledby="pills-media-tab"
+                      tabindex="0"
+                    >
+                      <div class="send-data-box">
+                        <div class="send-data-box-from-box">
+                          <form>
+                            <div class="input-box">
+                              <div class="input-data-box">
+                                <label
+                                  for="link-type"
+                                  class="d-block input-data-box-title"
+                                  >نوع المرفق</label
+                                >
+                                <div class="p-2 input-data-box-input-box">
+                                  <input
+                                    type="text"
+                                    id="link-type"
+                                    class="border-0"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="input-box pt-4">
+                              <div class="input-data-box">
+                                <label
+                                  for="message-media"
+                                  class="d-block input-data-box-title"
+                                  >الشرح</label
+                                >
+                                <div class="p-2 input-data-box-input-box">
+                                  <textarea
+                                    class="border-0 h-25 w-100"
+                                    id="message-media"
+                                  ></textarea>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="input-box input-box-upload mt-4">
+                              <label for="upload-file">
+                                <span class="input-box-upload-text">
+                                  اسحب المرفقات الي هنا
+                                </span>
+                                <i class="fa-solid fa-circle-plus"></i>
+                              </label>
+                              <input
+                                type="file"
+                                name="upload-file"
+                                id="upload-file"
+                                multiple
+                              />
+                            </div>
+
+                            <div class="add-new-link-text-container">
+                              <h4 class="add-new-link-text">اضف رابط</h4>
+                            </div>
+
+                            <div class="input-box">
+                              <div class="input-data-box">
+                                <label
+                                  for="link-title"
+                                  class="d-block input-data-box-title"
+                                  >عنوان الرابط</label
+                                >
+                                <div class="p-2 input-data-box-input-box">
+                                  <input
+                                    type="text"
+                                    id="link-title"
+                                    class="link-title border-0"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="input-box pt-4">
+                              <div class="input-data-box">
+                                <label
+                                  for="link-url"
+                                  class="d-block input-data-box-title"
+                                >
+                                  الرابط
+                                </label>
+                                <div class="p-2 input-data-box-input-box">
+                                  <input
+                                    type="text"
+                                    class="border-0"
+                                    id="link-url"
+                                  />
+                                  <span
+                                    class="input-data-box-input-box-icon"
+                                    data-tippy-content="اضف رابط اخر"
+                                    onclick="addLinks()"
+                                  >
+                                    <i class="fas fa-plus"></i>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="send-data-box-media-box">
+                          <div class="modal-progress-container">
+                            <div class="modal-progress-box mb-4">
+                              <div
+                                class="modal-progress-box-header d-flex justify-content-between gap-2"
+                              >
+                                <h5 class="input-data-box-title">اسم المرفق</h5>
+                                <i class="fa-solid fa-times"></i>
+                              </div>
+                              <div
+                                class="progress"
+                                role="progressbar"
+                                aria-label="Basic example"
+                                aria-valuenow="75"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              >
+                                <div class="progress-bar w-75"></div>
+                              </div>
+                            </div>
+                            <div class="modal-progress-box mb-4">
+                              <div
+                                class="modal-progress-box-header d-flex justify-content-between gap-2"
+                              >
+                                <h5 class="input-data-box-title">اسم المرفق</h5>
+                                <i class="fa-solid fa-times"></i>
+                              </div>
+                              <div
+                                class="progress"
+                                role="progressbar"
+                                aria-label="Basic example"
+                                aria-valuenow="25"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              >
+                                <div class="progress-bar w-25"></div>
+                              </div>
+                            </div>
+                            <div class="modal-progress-box mb-4">
+                              <div
+                                class="modal-progress-box-header d-flex justify-content-between gap-2"
+                              >
+                                <h5 class="input-data-box-title">اسم المرفق</h5>
+                                <i class="fa-solid fa-times"></i>
+                              </div>
+                              <div
+                                class="progress"
+                                role="progressbar"
+                                aria-label="Basic example"
+                                aria-valuenow="100"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              >
+                                <div class="progress-bar w-100"></div>
+                              </div>
+                            </div>
+                            <div class="modal-progress-box mb-4">
+                              <div
+                                class="modal-progress-box-header d-flex justify-content-between gap-2"
+                              >
+                                <h5 class="input-data-box-title">اسم المرفق</h5>
+                                <i class="fa-solid fa-times"></i>
+                              </div>
+                              <div
+                                class="progress"
+                                role="progressbar"
+                                aria-label="Basic example"
+                                aria-valuenow="75"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              >
+                                <div class="progress-bar w-75"></div>
+                              </div>
+                            </div>
+                            <div class="modal-progress-box mb-4">
+                              <div
+                                class="modal-progress-box-header d-flex justify-content-between gap-2"
+                              >
+                                <h5 class="input-data-box-title">اسم المرفق</h5>
+                                <i class="fa-solid fa-times"></i>
+                              </div>
+                              <div
+                                class="progress"
+                                role="progressbar"
+                                aria-label="Basic example"
+                                aria-valuenow="25"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              >
+                                <div class="progress-bar w-25"></div>
+                              </div>
+                            </div>
+                            <div class="modal-progress-box mb-4">
+                              <div
+                                class="modal-progress-box-header d-flex justify-content-between gap-2"
+                              >
+                                <h5 class="input-data-box-title">اسم المرفق</h5>
+                                <i class="fa-solid fa-times"></i>
+                              </div>
+                              <div
+                                class="progress"
+                                role="progressbar"
+                                aria-label="Basic example"
+                                aria-valuenow="75"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              >
+                                <div class="progress-bar w-75"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="modal-media-container"
+                            id="media-list"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--       end header-->
+
+      <!--           start content-->
+      <div class="main-container">
+        <main class="main wrapper">
+          <div class="send-page">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="send-page-filter">
+                    <form>
+                      <div class="send-page-filter-item">
+                        <input type="text" placeholder="رقم الطلب" />
+                      </div>
+                      <div
+                        class="send-page-filter-item send-page-filter-item-clint-input"
+                      >
+                        <input type="text" placeholder="اسم العميل" />
+                      </div>
+                      <div class="send-page-filter-item">
+                        <select>
+                          <option value="saute" disabled selected>
+                            الحاله
+                          </option>
+                          <option value="open">متاح</option>
+                          <option value="close">غير متاح</option>
+                        </select>
+                      </div>
+                      <div class="send-page-filter-item date-filter-input-box">
+                        <label
+                          onclick="toggleDateInput()"
+                          for="date-filter-input"
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          تاريخ الارسال
+                          <i class="fa-regular fa-calendar-days"></i>
+                        </label>
+                        <input
+                          type="date"
+                          name="date"
+                          class="d-none"
+                          id="date-filter-input"
+                          placeholder="تاريخ الارسال"
+                        />
+                      </div>
+                      <div
+                        class="send-page-filter-item send-page-filter-item-filter-botton"
+                      >
+                        <button class="filter-botton">دخول</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="send-page-box">
+                    <div
+                      class="send-page-box-header"
+                      style="border-color: #6ea177"
+                    >
+                      <h4 class="send-page-box-header-number">13825664</h4>
+                      <h4 class="send-page-box-header-date">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span>1/10/2012</span>
+                      </h4>
+                    </div>
+                    <h3 class="send-page-box-title pt-4 pb-3">اسم المستقبل</h3>
+                    <p class="send-page-box-prag">
+                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                      ما سيلهي القارئ عن التركيز
+                    </p>
+                    <div
+                      class="send-page-box-icon-box d-flex align-items-center justify-content-end gap-3 pt-2"
+                    >
+                      <span data-tippy-content="5  روابط">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </span>
+                      <span data-tippy-content="5  مرفقات">
+                        <i class="fa-solid fa-upload"></i>
+                      </span>
+                    </div>
+                    <a href="./message.html" class="stretched-link"></a>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="send-page-box">
+                    <div
+                      class="send-page-box-header"
+                      style="border-color: #0085f9"
+                    >
+                      <h4 class="send-page-box-header-number">13825664</h4>
+                      <h4 class="send-page-box-header-date">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span>1/10/2012</span>
+                      </h4>
+                    </div>
+                    <h3 class="send-page-box-title pt-4 pb-3">اسم المستقبل</h3>
+                    <p class="send-page-box-prag">
+                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                      ما سيلهي القارئ عن التركيز
+                    </p>
+                    <div
+                      class="send-page-box-icon-box d-flex align-items-center justify-content-end gap-3 pt-2"
+                    >
+                      <span data-tippy-content="5  روابط">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </span>
+                      <span data-tippy-content="5  مرفقات">
+                        <i class="fa-solid fa-upload"></i>
+                      </span>
+                    </div>
+                    <a href="./message.html" class="stretched-link"></a>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="send-page-box">
+                    <div
+                      class="send-page-box-header"
+                      style="border-color: #659b6f"
+                    >
+                      <h4 class="send-page-box-header-number">13825664</h4>
+                      <h4 class="send-page-box-header-date">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span>1/10/2012</span>
+                      </h4>
+                    </div>
+                    <h3 class="send-page-box-title pt-4 pb-3">اسم المستقبل</h3>
+                    <p class="send-page-box-prag">
+                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                      ما سيلهي القارئ عن التركيز
+                    </p>
+                    <div
+                      class="send-page-box-icon-box d-flex align-items-center justify-content-end gap-3 pt-2"
+                    >
+                      <span data-tippy-content="5  روابط">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </span>
+                      <span data-tippy-content="5  مرفقات">
+                        <i class="fa-solid fa-upload"></i>
+                      </span>
+                    </div>
+                    <a href="./message.html" class="stretched-link"></a>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="send-page-box">
+                    <div
+                      class="send-page-box-header"
+                      style="border-color: #df4820"
+                    >
+                      <h4 class="send-page-box-header-number">13825664</h4>
+                      <h4 class="send-page-box-header-date">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span>1/10/2012</span>
+                      </h4>
+                    </div>
+                    <h3 class="send-page-box-title pt-4 pb-3">اسم المستقبل</h3>
+                    <p class="send-page-box-prag">
+                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                      ما سيلهي القارئ عن التركيز
+                    </p>
+                    <div
+                      class="send-page-box-icon-box d-flex align-items-center justify-content-end gap-3 pt-2"
+                    >
+                      <span data-tippy-content="5  روابط">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </span>
+                      <span data-tippy-content="5  مرفقات">
+                        <i class="fa-solid fa-upload"></i>
+                      </span>
+                    </div>
+                    <a href="./message.html" class="stretched-link"></a>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="send-page-box">
+                    <div
+                      class="send-page-box-header"
+                      style="border-color: #edbf07"
+                    >
+                      <h4 class="send-page-box-header-number">13825664</h4>
+                      <h4 class="send-page-box-header-date">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span>1/10/2012</span>
+                      </h4>
+                    </div>
+                    <h3 class="send-page-box-title pt-4 pb-3">اسم المستقبل</h3>
+                    <p class="send-page-box-prag">
+                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                      ما سيلهي القارئ عن التركيز
+                    </p>
+                    <div
+                      class="send-page-box-icon-box d-flex align-items-center justify-content-end gap-3 pt-2"
+                    >
+                      <span data-tippy-content="5  روابط">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </span>
+                      <span data-tippy-content="5  مرفقات">
+                        <i class="fa-solid fa-upload"></i>
+                      </span>
+                    </div>
+                    <a href="./message.html" class="stretched-link"></a>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="send-page-box">
+                    <div
+                      class="send-page-box-header"
+                      style="border-color: #659b6f"
+                    >
+                      <h4 class="send-page-box-header-number">13825664</h4>
+                      <h4 class="send-page-box-header-date">
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span>1/10/2012</span>
+                      </h4>
+                    </div>
+                    <h3 class="send-page-box-title pt-4 pb-3">اسم المستقبل</h3>
+                    <p class="send-page-box-prag">
+                      هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة
+                      ما سيلهي القارئ عن التركيز
+                    </p>
+                    <div
+                      class="send-page-box-icon-box d-flex align-items-center justify-content-end gap-3 pt-2"
+                    >
+                      <span data-tippy-content="5  روابط">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </span>
+                      <span data-tippy-content="5  مرفقات">
+                        <i class="fa-solid fa-upload"></i>
+                      </span>
+                    </div>
+                    <a href="./message.html" class="stretched-link"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div
+                    class="pagination-section d-flex align-items-center justify-content-between gap-4"
+                  >
+                    <div class="pagination-box d-flex align-items-center gap-2">
+                      <label
+                        for="page-number"
+                        class="pagination-box-select-text"
+                      >
+                        الصفحه
+                      </label>
+                      <input type="text" id="page-number" />
+                      <label
+                        for="pagination-box-select"
+                        class="pagination-box-select-text"
+                      >
+                        من
+                      </label>
+                      <div class="pagination-box-arrow-box">
+                        <span class="active">
+                          <i class="fa-solid fa-angle-right"></i>
+                        </span>
+                        <span>
+                          <i class="fa-solid fa-angle-left"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="pagination-box pagination-box-select d-flex align-items-center gap-2"
+                    >
+                      <label
+                        for="pagination-box-select"
+                        class="pagination-box-select-text"
+                        >العدد</label
+                      >
+                      <select id="pagination-box-select">
+                        <option value="1">عناصر 1</option>
+                        <option value="2">عناصر 2</option>
+                        <option value="3">عناصر 3</option>
+                        <option value="4">عناصر 4</option>
+                        <option value="5">عناصر 5</option>
+                        <option value="6">عناصر 6</option>
+                        <option value="7">عناصر 7</option>
+                        <option value="8">عناصر 8</option>
+                        <option value="9">عناصر 9</option>
+                        <option value="10">عناصر 10</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <!--           end content-->
+      <!--           start footer-->
+      <div class="footer-container">
+        <footer class="wrapper">
+          <div
+            class="copy-right d-flex align-items-center justify-content-center gap-2 pt-4"
+          >
+            <span class="copy-right-text">احد مشاريع</span>
+            <a href="https://www.alqemam.com/" target="_blank">
+              <img src="./assets/imgs/alqemam.webp" alt="" class="img-fluid"
+            /></a>
+            <span class="copy-right-text">2019 &copy;</span>
+          </div>
+        </footer>
+      </div>
+      <!--           end footer-->
+      <div class="overlay d-none" onclick="removeMenu()"></div>
+    </div>
+    <script src="./assets/js/plugin/bootstrap.min.js"></script>
+    <script src="./assets/js/plugin/all.min.js"></script>
+    <script src="./assets/js/plugin/popper.js"></script>
+    <script src="./assets/js/plugin/tippy.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

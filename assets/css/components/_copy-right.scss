@@ -1,0 +1,13 @@
+.copy-right {
+  padding: 24px 0;
+  .copy-right-text {
+    font-size: 14px;
+    color: #adadad;
+    img {
+      height: 15px;
+    }
+    @include media(772) {
+      font-size: 11px;
+    }
+  }
+}

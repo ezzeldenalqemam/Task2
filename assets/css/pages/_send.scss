@@ -1,0 +1,201 @@
+.send-page {
+  .send-page-filter {
+    padding: 12px;
+    @extend %box-style-content;
+    margin-bottom: 40px;
+    form {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .send-page-filter-item {
+        width: 100%;
+        height: 100%;
+        &.send-page-filter-item-clint-input {
+          width: 140%;
+        }
+        // &:not(.date-filter-input-box) {
+        input,
+        select {
+          border: 1px solid #a5a5a5;
+          border-radius: 50px;
+          padding: 12px;
+          width: 100%;
+          color: #8d8d8d;
+          &:focus {
+            outline: 0;
+            box-shadow: none;
+          }
+          &::placeholder {
+            color: #a5a5a5;
+            font-size: 14px;
+          }
+        }
+        // }
+
+        &.date-filter-input-box {
+          label {
+            color: #a5a5a5;
+            font-size: 14px;
+            border: 1px solid #a5a5a5;
+            border-radius: 50px;
+            padding: 12px;
+            width: 100%;
+            svg {
+              font-size: 16px;
+            }
+            &:target {
+              display: none;
+              & ~ input {
+                display: block;
+              }
+            }
+          }
+        }
+        .filter-botton {
+          border: 0;
+          box-shadow: 0 0 16px #0000001f;
+          background: linear-gradient(90deg, #5ca88a 11%, #2aafb1 89%);
+          color: #fff;
+          font-size: 14px;
+          font-weight: 600;
+          display: block;
+          width: 100%;
+          padding: 15px;
+        }
+      }
+      @include media(1200) {
+        flex-wrap: wrap;
+        gap: 18px;
+        .send-page-filter-item {
+          width: 49%;
+          &.send-page-filter-item-clint-input {
+            width: 49%;
+          }
+          &.send-page-filter-item-filter-botton {
+            width: 100%;
+          }
+        }
+      }
+      @include media(992) {
+        .send-page-filter-item {
+          width: 48%;
+          &.send-page-filter-item-clint-input {
+            width: 48%;
+          }
+        }
+      }
+      @include media(992) {
+        .send-page-filter-item {
+          width: 100%;
+          &.send-page-filter-item-clint-input {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .send-page-box {
+    padding: 12px;
+    @extend %box-style-content;
+    position: relative;
+    .send-page-box-header {
+      display: flex;
+
+      padding: 16px 12px;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #f0f0f0;
+      font-weight: 500;
+      color: #8d8d8d;
+      @include dir(rtl) {
+        border-right: 5px solid;
+        border-radius: 10px 0 0 10px;
+      }
+      @include dir(ltr) {
+        border-left: 5px solid;
+        border-radius: 0 10px 10px 0;
+      }
+      .send-page-box-header-number,
+      .send-page-box-header-date {
+        font-size: 18px;
+        @include media(772) {
+          font-size: 14px;
+        }
+      }
+    }
+    .send-page-box-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #2eaca8;
+    }
+    .send-page-box-prag {
+      font-size: 13px;
+      font-weight: 500;
+      color: #898989;
+    }
+    .send-page-box-icon-box {
+      svg {
+        color: #8d8d8d;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .pagination-section {
+    padding: 24px 0;
+    @include media(772) {
+      flex-direction: column-reverse;
+    }
+    .pagination-box {
+      label {
+        font-size: 14px;
+        color: #8d8d8d;
+        @include media(772) {
+          font-size: 12px;
+        }
+      }
+      input {
+        width: 50px;
+        padding: 4px;
+        border-radius: 8px;
+        color: #8d8d8d;
+        border: 1px solid #8d8d8d;
+        text-align: center;
+      }
+      select {
+        padding: 4px;
+        border-radius: 8px;
+        color: #8d8d8d;
+        border: 1px solid #8d8d8d;
+        @include media(772) {
+          font-size: 12px;
+        }
+      }
+
+      .pagination-box-arrow-box {
+        display: flex;
+        align-items: center;
+        @extend %box-style-content;
+        overflow: hidden;
+        span {
+          display: grid;
+          place-items: center;
+          width: 39px;
+          height: 35px;
+          font-size: 15px;
+          color: #2aafb0;
+          cursor: pointer;
+          &.active {
+            background: linear-gradient(90deg, #5ca88a 11%, #2aafb1 89%);
+            color: #fff;
+          }
+          svg {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.media-modal {
+  .modal-dialog {
+    .modal-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: #28a9a5;
+    }
+    .btn-close {
+      font-size: 9px;
+    }
+
+    .modal-tab-box {
+      ul {
+        display: flex;
+        justify-content: center;
+        border-radius: 12px;
+        width: fit-content;
+        margin: 0 auto;
+        overflow: hidden;
+        @include media(772) {
+          display: block;
+        }
+        .nav-item {
+          button {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 12px 34px;
+            background: #f5f5f5;
+            color: #989898;
+            border: 0;
+            @include media(772) {
+              width: 100%;
+            }
+            &.active {
+              color: #fff;
+              @extend.tb-button;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.input-data-box {
+  position: relative;
+  .input-data-box-name-container {
+    background: #fff;
+    border-radius: 30px;
+    border: 1px solid #eee;
+    position: absolute;
+    height: 323px;
+    z-index: 99;
+    overflow: auto;
+    padding: 12px;
+    @extend %scrollableStyle;
+    ul {
+      li {
+        width: 25%;
+        @include media(992) {
+          width: 47%;
+        }
+        @include media(772) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

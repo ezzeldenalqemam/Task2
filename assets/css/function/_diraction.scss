@@ -1,0 +1,5 @@
+@mixin dir($dir) {
+  html[dir="#{$dir}"] & {
+    @content;
+  }
+}

@@ -1,0 +1,153 @@
+.message-page {
+  .message-container {
+    @extend %box-style-content;
+    padding: 12px;
+    .message-container-header {
+      border-bottom: 1px solid #0000001f;
+      .message-container-header-name-box {
+        .message-container-header-name {
+          font-size: 14px;
+          font-weight: 600;
+          color: #2aafb0;
+        }
+        .message-container-header-number {
+          font-size: 13px;
+          font-weight: 500;
+          color: #989898;
+        }
+      }
+    }
+    .message-container-body {
+      display: flex;
+      .message-container-body-content {
+        padding-inline-end: 12px;
+        margin-inline-end: 12px;
+        border-inline-end: 1px solid #eeeeee;
+        width: 70%;
+        .message-container-body-content-item {
+          padding-inline-start: 24px;
+          border-inline-start: 4px solid #eeeeee;
+        }
+      }
+      .message-container-button {
+        width: 30%;
+        .tab-content {
+          max-height: 635px;
+          overflow: auto;
+          @extend %scrollableStyle;
+          .tab-pane {
+            margin-inline-end: 4px;
+          }
+        }
+        .message-container-button-tabs {
+          display: flex;
+          margin-bottom: 24px;
+          align-items: center;
+          .message-container-button-tabs-item {
+            width: 50%;
+            padding: 12px;
+            color: #b3b3b3;
+            background-color: transparent;
+            font-size: 13px;
+            font-weight: 500;
+            border: 0 {
+              bottom: 3px solid #eeeeee;
+            }
+            &.active {
+              color: #2aafb0;
+              border-bottom-color: #2aafb0;
+            }
+          }
+        }
+
+        .message-container-media-item {
+          .message-container-button-name-img-icon-box {
+            display: grid;
+            place-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 25px;
+            background-color: #eeeeee;
+            svg {
+              color: #b3b3b3;
+            }
+          }
+
+          .message-container-button-name-item-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2aafb0;
+          }
+          .message-container-button-name-item-type {
+            font-size: 12px;
+            font-weight: 500;
+            color: #737373;
+          }
+        }
+
+        .message-container-button-exclamation {
+          font-size: 16px;
+          font-weight: 500;
+          color: #737373;
+        }
+
+        .message-box-text {
+          border: 1px solid #eeeeee;
+        }
+      }
+      @include media(992) {
+        .message-container-body-content,
+        .message-container-button {
+          width: 50%;
+        }
+      }
+      @include media(772) {
+        flex-direction: column;
+        .message-container-body-content,
+        .message-container-button {
+          width: 100%;
+        }
+        .message-container-body-content {
+          padding-inline-end: 0;
+          margin-inline-end: 0;
+          border-inline-end: 0;
+          padding-bottom: 12px;
+          margin-bottom: 12px;
+          border-bottom: 1px solid #eeeeee;
+        }
+      }
+    }
+  }
+  .message-container-date {
+    font-size: 14px;
+    font-weight: 500;
+    color: #989898;
+  }
+  .message-container-body-content-item-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2aafb0;
+  }
+  .message-container-body-content-item-prag {
+    font-size: 12px;
+    font-weight: 500;
+    color: #737373;
+  }
+}
+
+.button-section {
+  padding: 40px 0;
+  .button-box {
+    .button-box-item {
+      border: 0;
+      box-shadow: 0 0 16px #0000001f;
+      background: linear-gradient(90deg, #5ca88a 11%, #2aafb1 89%);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      display: block;
+      padding: 12px 36px;
+    }
+  }
+}
