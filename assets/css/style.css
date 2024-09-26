@@ -605,7 +605,7 @@ html[dir=ltr] .home-page-content .home-page-box .box-img {
   font-size: 14px;
   font-weight: 500;
   color: #fff;
-  width: 100%;
+  width: calc(100% - 30px);
   text-align: center;
 }
 .home-page-content .home-page-box .home-page-box-title-box .home-page-box-title-box-number {
